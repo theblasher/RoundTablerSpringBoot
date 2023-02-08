@@ -22,10 +22,10 @@ public class RoundTable {
         sbHTML.append("<h1>RoundTabler Scan Results for:</h1>\n");
         sbHTML.append("<h2>Database: <span style=\"font-weight: lighter;\">" + config.getDatabase() + "</span></h2>\n");
         sbHTML.append("<h2>Server: <span style=\"font-weight: lighter;\">" + config.getServer() + "</span></h2>\n");
-        sbHTML.append("<h2>Scan Type: <span style=\"font-weight: lighter;\">" + config.getType() + "</span></h2>\n");
+        sbHTML.append("<h2>Scan Type: <span style=\"font-weight: lighter;\">" + config.getScanType() + "</span></h2>\n");
 
-        if (!config.getTable().equals("")) {
-            sbHTML.append("<h2>Table: <span style=\"font-weight: lighter;\">" + config.getTable() + "</span></h2></div>\n");
+        if (!config.getTableName().equals("")) {
+            sbHTML.append("<h2>Table: <span style=\"font-weight: lighter;\">" + config.getTableName() + "</span></h2></div>\n");
         } else {
             sbHTML.append("</div>");
         }
