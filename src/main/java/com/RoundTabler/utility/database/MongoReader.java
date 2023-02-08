@@ -58,7 +58,7 @@ public class MongoReader extends DBReader {
         // Have to keep in mind the table argument passed here, if it was given
         // Many simplifications are performed to dumb results down to string values that are easily represented
         for (Document doc : collections) {
-            if (!this.config.getTable().isBlank() && !Objects.equals(doc.get("name").toString(), this.config.getTable()) || doc.isEmpty())
+            if (!this.config.getTableName().isBlank() && !Objects.equals(doc.get("name").toString(), this.config.getTableName()) || doc.isEmpty())
                 continue;
 
             MongoCollection<Document> collection = db.getCollection(doc.getString("name"));

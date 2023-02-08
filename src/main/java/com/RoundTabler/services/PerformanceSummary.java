@@ -1,11 +1,14 @@
 package com.RoundTabler.services;
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 
 /*
  * Class/structure that contains all PerformanceResults
  */
 
+@Getter
 public class PerformanceSummary {
 
     private final ArrayList<PerformanceResult> performanceResults = new ArrayList<>();

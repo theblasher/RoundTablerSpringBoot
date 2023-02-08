@@ -84,14 +84,14 @@ public class JDBCUser extends DBReader {
         stmtString.append(" where DATA_TYPE IN ");
         stmtString.append(this.datatypes);
         stmtString.append("AND TABLE_SCHEMA=?");
-        if (!config.getTable().isBlank()) {
+        if (!config.getTableName().isBlank()) {
             stmtString.append(" AND TABLE_NAME=?");
         }
 
         buildSchema = conn.prepareStatement(stmtString.toString(), ResultSet.TYPE_SCROLL_SENSITIVE);
         buildSchema.setString(1, config.getDatabase());
-        if (!config.getTable().isBlank()) {
-            buildSchema.setString(2, config.getTable());
+        if (!config.getTableName().isBlank()) {
+            buildSchema.setString(2, config.getTableName());
         }
     }
 }

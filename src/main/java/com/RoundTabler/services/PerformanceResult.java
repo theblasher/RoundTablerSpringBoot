@@ -27,8 +27,8 @@ public class PerformanceResult {
     private void CalculatePerformance() {
         long elapsed = ChronoUnit.SECONDS.between(ScanStarted, ScanFinished);
         if (elapsed != 0) {
-            Double dRows = Double.valueOf(rowsScanned);
-            Double dElapsed = Double.valueOf(elapsed);
+            Double dRows = (double) rowsScanned;
+            Double dElapsed = (double) elapsed;
             RowsPerSecond = dRows / dElapsed;
 
         } else {
@@ -36,7 +36,7 @@ public class PerformanceResult {
         }
 
         if ((RowsPerSecond == 0.0) && (rowsScanned > 0)) {
-            RowsPerSecond = Double.valueOf(rowsScanned);
+            RowsPerSecond = (double) rowsScanned;
         }
     }
 

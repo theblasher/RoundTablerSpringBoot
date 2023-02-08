@@ -11,9 +11,9 @@ public class ConfigurationTest {
 
         Configuration config = new Configuration();
 
-        config.setType("all");
+        config.setScanType("all");
 
-        assertEquals("all", config.getType());
+        assertEquals("all", config.getScanType());
 
     }
 
@@ -77,9 +77,9 @@ public class ConfigurationTest {
 
         Configuration config = new Configuration();
 
-        config.setTable("table");
+        config.setTableName("table");
 
-        assertEquals("table", config.getTable());
+        assertEquals("table", config.getTableName());
 
     }
 
@@ -98,7 +98,7 @@ public class ConfigurationTest {
 
         Configuration config = new Configuration();
 
-        config.setType("all");
+        config.setScanType("all");
         config.setDbType("mariadb");
         config.setServer("127.0.0.1");
         config.setUser("user");
@@ -114,7 +114,7 @@ public class ConfigurationTest {
 
         Configuration config = new Configuration();
 
-        config.setType("all");
+        config.setScanType("all");
         config.setDbType("mariadb");
         config.setServer("127.0.0.1");
         config.setUser("user");
@@ -129,7 +129,7 @@ public class ConfigurationTest {
 
         Configuration config = new Configuration();
 
-        config.setType("all");
+        config.setScanType("all");
 
         assertTrue(config.validateScanType());
 
@@ -140,7 +140,7 @@ public class ConfigurationTest {
 
         Configuration config = new Configuration();
 
-        config.setType("invalid");
+        config.setScanType("invalid");
 
         assertFalse(config.validateScanType());
 
@@ -173,7 +173,7 @@ public class ConfigurationTest {
 
         Configuration config = new Configuration();
 
-        config.setType("all");
+        config.setScanType("all");
         config.setDbType("mariadb");
         config.setServer("127.0.0.1");
         config.setUser("user");

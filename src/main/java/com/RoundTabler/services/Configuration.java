@@ -14,40 +14,40 @@ public class Configuration {
     private final String[] validScanTypes = {"all", "nacha", "pci"};
     private final String[] validDbTypes = {"mysql", "mariadb", "maria", "postgres", "postgresql", "mongo", "mongodb"};
     public String missingParameter;
-    private String type;
+    private String scanType;
     private String dbType;
     private String server;
     private String user;
     private String password;
     private String database;
-    private String table;
+    private String tableName;
     private String port;
 
     public Configuration() {
-        this.type = "";
+        this.scanType = "";
         this.dbType = "";
         this.server = "";
         this.port = "";
         this.user = "";
         this.password = "";
         this.database = "";
-        this.table = "";
+        this.tableName = "";
     }
 
     //All getters and setters for config class
 
-    public String getType() {
-        return this.type;
+    public String getScanType() {
+        return this.scanType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setScanType(String scanType) {
+        this.scanType = scanType;
     }
 
     public boolean validateScanType() {
         List<String> types = Arrays.asList(this.validScanTypes);
 
-        return types.contains(this.type.toLowerCase());
+        return types.contains(this.scanType.toLowerCase());
     }
 
     public String getDbType() {
@@ -104,12 +104,12 @@ public class Configuration {
         return types.contains(this.dbType.toLowerCase());
     }
 
-    public String getTable() {
-        return this.table;
+    public String getTableName() {
+        return this.tableName;
     }
 
-    public void setTable(String table) {
-        this.table = table;
+    public void setTableName(String tableName) {
+        this.tableName = tableName;
     }
 
 

@@ -1,30 +1,30 @@
 package com.RoundTabler.services;
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 
 /*
  * Class/structure that contains all ScanResults
  */
-
+@Getter
 public class ScanSummary {
 
-    private final ArrayList<ScanResult> ScannerResults = new ArrayList<ScanResult>();
+    private final ArrayList<ScanResult> scanResults = new ArrayList<>();
 
     public ScanSummary() {
         super();
     }
 
-    public void addResult(ScanResult NewResult) {
-        ScannerResults.add(NewResult);
+    public void addResult(ScanResult newResult) {
+        scanResults.add(newResult);
     }
 
     public String toString() {
-        StringBuilder temp;
-        int index;
-        temp = new StringBuilder();
+        StringBuilder temp = new StringBuilder();
 
-        for (index = 0; index < ScannerResults.size(); index++) {
-            temp.append(ScannerResults.get(index).toString() + "\n");
+        for (ScanResult scanResult : scanResults) {
+            temp.append(scanResult.toString()).append("\n");
         }
 
         return temp.toString();

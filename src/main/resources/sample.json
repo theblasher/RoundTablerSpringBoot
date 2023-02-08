@@ -1,0 +1,44 @@
+{"configuration":
+  {
+  "databaseName": "",
+  "serverName": "",
+  "scanType:": "",
+  "tableName": ""
+  },
+  "matchedScanSummary": [
+    {
+      "tableName": "",
+      "tableColumn": "",
+      "HTMLEmphasizedResult": "",
+      "matchType": "",
+      "confidenceLevel": "",
+      "matchResultRule": ""
+    },
+    {
+      "tableName": "",
+      "tableColumn": "",
+      "HTMLEmphasizedResult": "",
+      "matchType": "",
+      "confidenceLevel": "",
+      "matchResultRule": ""
+    }
+  ],
+  "performanceScanSummary": [
+    {
+      "tableName": "",
+      "columnName": "",
+      "scanType": "",
+      "rowsScanned": "",
+      "rowsMatched": "",
+      "rowsPerSecond": ""
+    },
+    {
+      "tableName": "",
+      "columnName": "",
+      "scanType": "",
+      "rowsScanned": "",
+      "rowsMatched": "",
+      "rowsPerSecond": ""
+    }
+  ]
+}

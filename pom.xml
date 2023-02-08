@@ -37,6 +37,11 @@
 			<artifactId>mongo-java-driver</artifactId>
 			<version>3.12.11</version>
 		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20180130</version>
+		</dependency>
     </dependencies>
 
 	<build>
